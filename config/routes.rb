@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
+  root "listening_questions#index"
   namespace :admin do
+    scope :question do
+      namespace :listening, path: '/' do
+        resources :listening_questions
+      end
+      namespace :reading, path: '/' do
+        resources :reading_questions
+      end
+      namespace :writing, path: '/' do
+        resources :writing_questions
+      end
+    end
     scope :exam do
       namespace :reading, path: '/' do
         resources :reading_exams
@@ -11,6 +23,5 @@ Rails.application.routes.draw do
         resources :writing_exams
       end
     end
-    
   end
 end

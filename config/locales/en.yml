@@ -19,8 +19,41 @@ en:
         detail: "Detail"
         edit: "Edit"
         delete: "Delete"
+    listening: 
+      listening_questions:
+        index:
+          part1: "Part 1: Picture listening"
+          part2: "Part 2: Conversation listening"
+          add: "Add"
+          detail: "Details"
+          file: "FILE Nghe"
+        question_type:
+          detail: "Details"
+          browser: "Your browser does not support the audio element."
+      conversation_questions:
+        question:
+          answer: "answer:"
+      picture_questions:
+        question:
+          answer: "answer:"
+      listening_exams:
+        index:
+          part1: "Part 1: Picture listening"
+          part2: "Part 2: Conversation listening"
+      shared:
+        list_exam:
+          create_exam: "Create exam"
+          action: "Action"
+          name: "Name"
+          order_number: "#"
     reading:
       reading_exams:
+        index:
+          part1: "Part 1: Grammar reading"
+          part2: "Part 2: Sign reading"
+          part3: "Part 3: Paragraph reading"
+          part4: "Part 4: Filling reading"
+      reading_questions:
         index:
           part1: "Part 1: Grammar reading"
           part2: "Part 2: Sign reading"
@@ -32,17 +65,18 @@ en:
           action: "Action"
           name: "Name"
           order_number: "#"
-    listening:
-      listening_exams:
-        index:
-          part1: "Part 1: Picture listening"
-          part2: "Part 2: Conversation listening"
-      shared:
-        list_exam:
-          create_exam: "Create exam"
-          action: "Action"
-          name: "Name"
-          order_number: "#"
+      filling_questions:
+        question:
+          answer: "answer:"
+      grammar_questions:
+        question:
+          answer: "answer:"
+      paragraph_questions:
+        question:
+          answer: "answer:"
+      sign_questions:
+        question:
+          answer: "answer:"
     writing:
       shared:
         list_exam:
@@ -53,3 +87,24 @@ en:
       writing_exams:
         index:
           part1: "Rewriting"
+          add: "Add"
+          detail: "Details"
+          paragraph: "paragraph"
+          question: "question"
+          optionA: "option A"
+          optionB: "option B"
+          optionC: "option C"
+          optionD: "option D"
+          answer: "answer"
+          sign: "sign picture"
+        question_type:
+          detail: "Details"
+          browser: "Your browser does not support the audio element."  
+      writing_questions:
+        index:
+          part1: "Rewriting"
+          add: "Add"
+          question: "question"
+          answer: "answer"
+        question:
+            answer: "answer:"
