@@ -17,4 +17,4 @@
 //= require i18n
 //= require i18n.js
 //= require i18n/translations
-//= require application_vendor
+//= require admin/application_vendor

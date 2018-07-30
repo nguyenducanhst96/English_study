@@ -1,0 +1,41 @@
+<div class="center">
+  <div class="col-sm-12">
+    <div class="tabbable">
+      <ul class="nav nav-tabs padding-12 tab-color-blue background-blue" id="myTab4">
+        <li class="active">
+          <a data-toggle="tab" href="#part1"><%= t ".part1" %></a>
+        </li>
+
+        <li>
+          <a data-toggle="tab" href="#part2"><%= t ".part2" %></a>
+        </li>
+
+        <li>
+          <a data-toggle="tab" href="#part3"><%= t ".part3" %></a>
+        </li>
+
+        <li>
+          <a data-toggle="tab" href="#part4"><%= t ".part4" %></a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="part1" class="tab-pane in active">
+          <%= render "admin/reading/shared/list_exam", exams: @grammar_exams %>
+        </div>
+
+        <div id="part2" class="tab-pane">
+          <%= render "admin/reading/shared/list_exam", exams: @sign_exams %>
+        </div>
+
+        <div id="part3" class="tab-pane">
+          <%= render "admin/reading/shared/list_exam", exams: @text_exams %>
+        </div>
+
+        <div id="part4" class="tab-pane">
+          <%= render "admin/reading/shared/list_exam", exams: @fill_exams %>
+        </div>
+      </div>
+    </div>
+  </div><!-- /.col -->
+</div>
