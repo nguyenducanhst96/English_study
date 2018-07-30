@@ -1,1 +1,15 @@
 en:
+  layouts:
+    admin:
+      header:
+        title: "English study"
+        welcome: "Welcome,"
+        setting: "Settings"
+        profile: "Profile"
+        logout: "Logout"
+        exam: "Exam management"
+        question: "Question management"
+        user: "User management"
+        listen: "Listenning"
+        read: "Reading"
+        write: "Writing"
