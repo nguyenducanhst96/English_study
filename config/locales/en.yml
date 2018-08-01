@@ -47,6 +47,21 @@ en:
           name: "Name"
           order_number: "#"
     reading:
+      grammar_exams:
+        new:
+          header_create_grammar_exam: "Create grammar exam"
+          name: "Name"
+          title_question: "Title question"
+          option_a: "Option A"
+          option_b: "Option B"
+          option_c: "Option C"
+          option_d: "Option D"
+          solution: "Solution"
+          cancel: "Cancel"
+          create_exam: "Create exam"
+        create:
+          flash_success: "Create success!!!"
+          flash_danger: "Create failed!!!"
       reading_exams:
         index:
           part1: "Part 1: Grammar reading"

@@ -5,3 +5,6 @@ validate:
   answer:
     content:
       maxlength: 150
+Admin:
+  grammar_exams:
+    per_page: 10

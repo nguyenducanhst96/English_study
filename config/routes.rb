@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     scope :exam do
       namespace :reading, path: '/' do
         resources :reading_exams
+        resources :grammar_exams
       end
       namespace :listening, path: '/' do
         resources :listening_exams
