@@ -1,4 +1,4 @@
-ActiveRecord::Schema.define(version: 2018_07_29_045102) do
+ActiveRecord::Schema.define(version: 2018_08_01_040248) do
 
   create_table "answers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2018_07_29_045102) do
   end
 
   create_table "question_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "content"
+    t.text "content"
     t.bigint "topic_id"
     t.bigint "exam_id"
     t.datetime "created_at", null: false
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 2018_07_29_045102) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "code"
+    t.index ["code"], name: "index_topics_on_code", unique: true
   end
 
   create_table "user_exams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="input-group col-md-10">
+        <span class="input-group-btn" style="padding-left: 150px;padding-right: 140px;">
+          <a href="#" role="button" class="green" data-toggle="modal">
+            <button type="button" class="btn btn-success btn-sm">
+              <span class="ace-icon fa fa-pencil-square-o icon-on-right bigger-110"></span>
+              <%= t ".create_exam" %>
+            </button>
+          </a>
+        </span>
+      </div>
+
+    </div><br />
+    <!-- PAGE CONTENT BEGINS -->
+    <div class="row">
+      <div class="col-xs-12">
+        <table id="simple-table" class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th class="center">
+                <label class="pos-rel">
+                  <%= t ".order_number" %>
+                </label>
+              </th>
+
+              <th class="center"><%= t ".name" %></th>
+              <th class="center"><%= t ".action" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render "admin/shared/exam", exams: exams %>
+          </tbody>
+        </table>
+      </div><!-- /.span -->
+    </div><!-- /.row -->
+
+    <div class="hr hr-18 dotted hr-double"></div>
+    <!-- PAGE CONTENT ENDS -->
+  </div><!-- /.col -->
+</div><!-- /.row -->

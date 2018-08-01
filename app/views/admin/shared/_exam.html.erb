@@ -1,0 +1,27 @@
+<% if exams.present? %>
+  <% exams.each.with_index do |exam, index| %>
+    <tr>
+      <td><%= index+1 %></td>
+      <td><%= exam.name %></td>
+      <td>
+        <div class="hidden-sm hidden-xs btn-group">
+          <a href="#" target="_blank" role="button" data-toggle="modal">
+            <button class="btn btn-xs btn-info">
+              <i class="ace-icon fa fa-check bigger-120"> <%= t ".detail" %></i>
+            </button>
+          </a>
+          <a href="#SuaPart1" role="button" data-toggle="modal">
+            <button class="btn btn-xs btn-info">
+              <i class="ace-icon fa fa-pencil bigger-120"> <%= t ".edit" %></i>
+            </button>
+          </a>
+          <a href="#XoaPart1" role="button" data-toggle="modal">
+            <button class="btn btn-xs btn-danger">
+              <i class="ace-icon fa fa-trash-o bigger-120"> <%= t ".delete" %></i>
+            </button>
+          </a>
+        </div>
+      </td>
+    </tr>
+  <% end %>
+<% end %>
