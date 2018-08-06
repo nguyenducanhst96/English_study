@@ -5,7 +5,7 @@
       <span class="lbl"></span>
     </label>
   </td>
-  <td><%= question.title %></td>
+  <td><%=raw question.title %></td>
   <td><%= t ".answer"%><br/><%= Answer.true_answer(question.id).first&.content %></td>
   <td>
     <div class="hidden-sm hidden-xs btn-group">

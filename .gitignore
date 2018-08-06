@@ -50,3 +50,7 @@ node_modules/
 english_study/config/application.yml
 public/javascripts/translations.js
 config/database.yml
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml

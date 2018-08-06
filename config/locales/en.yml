@@ -107,4 +107,12 @@ en:
           question: "question"
           answer: "answer"
         question:
-            answer: "answer:"
+          answer: "answer:"
+        new:
+          title: "Create a new rewrite question"
+          question: "Question"
+          answer: "Answer"
+          close: "Close"
+          submit: "Submit"
+        create:
+          flash_success: "Create success"

@@ -1,0 +1,7 @@
+validate:
+  question:
+    title:
+      maxlength: 150
+  answer:
+    content:
+      maxlength: 150
