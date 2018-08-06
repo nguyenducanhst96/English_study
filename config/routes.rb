@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   root "listening_questions#index"
   namespace :admin do
     scope :question do
@@ -9,7 +10,8 @@ Rails.application.routes.draw do
         resources :reading_questions
       end
       namespace :writing, path: '/' do
-        resources :writing_questions
+        resources :writing_questions 
+        resources :questions
       end
     end
     scope :exam do

@@ -1,0 +1,58 @@
+<!-- poup them  -->
+<div id="ThemPart1" class="modal fade" tabindex="-1">
+  <div class="col-md-1"></div>
+  <div class=" col-md-10 ">
+    <div class="modal-content">
+      <div class="modal-header no-padding">
+        <div class="table-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            <span class="white">&times;</span>
+          </button>
+          <%= t ".title"%>
+        </div>
+      </div>
+      <%= form_for @question, url: admin_writing_writing_questions_path, :html => {:class => "form-horizontal", :id => "writing_form", :onsubmit => "check_form()" }  do |f| %>
+        <%= render "shared/error_messages", object: f.object %>
+        <div class="modal-body no-padding">
+          <div class="row container">
+            <!-- form them cau hoi -->
+            <div class="col-xs-12">
+              <!-- PAGE CONTENT BEGINS -->
+              <div class="space-6"></div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="form-field-1-1"><%= t ".question"%></label>
+                <div class="col-sm-8">
+                  <%= f.cktext_area :title, rows: 3, :maxlength => Settings.validate.question.title.maxlength, :required => true %>
+                </div>
+              </div>
+              <div class="form-group ">
+                <label class="col-sm-2 control-label" for="form-field-1-1"><%= t ".answer"%></label>
+                <%= f.fields_for :answers do |ff| %>
+                  <div class="col-sm-8">
+                    <%= ff.text_field :content, class: "form-control", :maxlength => Settings.validate.answer.content.maxlength, :required => true %>
+                  </div>
+                  <%= ff.hidden_field :truth, :value => true %>
+                <% end %>
+              </div>
+              <div class="hr hr-16 hr-dotted"></div>
+              <!-- PAGE CONTENT ENDS -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div>
+
+        <div class="modal-footer no-margin-top">
+            <button class="btn btn-sm btn-danger pull-left" data-dismiss="modal">
+                <i class="ace-icon fa fa-times"></i>
+                <%= t ".close"%>
+            </button>
+            <button class="btn btn-sm btn-danger pull-left" type= "submit">
+                <i class="ace-icon fa fa-check"></i>
+                <%= t ".submit"%>
+            </button>
+
+        </div>
+      <% end %>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+

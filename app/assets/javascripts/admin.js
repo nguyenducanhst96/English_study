@@ -1304,3 +1304,12 @@ $.widget( "custom.catcomplete", $.ui.autocomplete, {
   .selectmenu({ position: { my : "left bottom", at: "left top" } })
 
 });
+
+$("#writing_form").on("submit", function(){
+  var editor_val = CKEDITOR.instances['question_title'].getData() ;
+  if (editor_val == '') {
+    alert('Editor value cannot be empty!') ;
+    return false ;
+  }
+  return true ;
+});
