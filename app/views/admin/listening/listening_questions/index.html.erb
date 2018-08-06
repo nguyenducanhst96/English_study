@@ -1,0 +1,134 @@
+<div class="tabbable">
+  <ul class="nav nav-tabs padding-12 tab-color-blue background-blue" id="myTab4">
+    <li class="active">
+      <a data-toggle="tab" href="#part1"><%= t ".part1" %></a>
+    </li>
+    <li>
+      <a data-toggle="tab" href="#part2"><%= t ".part2" %></a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="part1" class="tab-pane in active">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="input-group col-md-10">
+              <span class="input-group-btn btn-add">
+                <a href="#modal-table" role="button" class="green" data-toggle="modal">
+                  <button type="button" class="btn btn-success btn-sm">
+                    <span class="ace-icon fa fa-pencil-square-o icon-on-right bigger-110"></span>
+                    <%= t ".add" %>
+                  </button>
+                </a>
+              </span>
+            </div>
+          </div><br />
+            <!-- PAGE CONTENT BEGINS -->
+          <div class="row">
+            <div class="col-xs-12">
+              <table id="simple-table" class="table  table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th class="center">
+                      <label class="pos-rel">
+                        <input type="checkbox" class="ace" />
+                        <span class="lbl"></span>
+                      </label>
+                    </th>
+                    <th class="detail-col"><%= t ".detail" %></th>
+                    <th><%= t ".file" %></th>
+                    <th class="center"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @question_type_picture.each do |question_type| %>
+                    <%= render "question_type",question_type: question_type  %>
+                    <% question_type.questions.each do |question| %>
+                      <%= render "admin/listening/picture_questions/question",question: question  %>
+                    <% end %>
+                  <% end %>
+                </tbody>
+              </table>
+            </div><!-- /.span -->
+          </div><!-- /.row -->
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="table-detail">
+              </div>
+            </div>
+          </div>
+          <div class="hr hr-18 dotted hr-double"></div>
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div>
+
+    <div id="part2" class="tab-pane">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="input-group col-md-10">
+              <span class="input-group-addon">
+                <i class="ace-icon fa fa-check"></i>
+              </span>
+              <input type="text" class="form-control search-query" placeholder="Type your query" />
+              <span class="input-group-btn btn-add">
+                <a href="#ThemPart2" role="button" class="green" data-toggle="modal">
+                  <button type="button" class="btn btn-success btn-sm">
+                    <span class="ace-icon fa fa-pencil-square-o icon-on-right bigger-110"></span>
+                    <%= t ".add" %>
+                  </button>
+                </a>
+              </span>
+            </div>
+          </div><br />
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+              <div class="col-xs-12">
+                <table id="simple-table" class="table  table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th class="center">
+                        <label class="pos-rel">
+                          <input type="checkbox" class="ace" />
+                          <span class="lbl"></span>
+                        </label>
+                      </th>
+                      <th class="detail-col"><%= t ".detail" %></th>
+                      <th><%= t ".file" %></th>
+                      <th class="center"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <% @question_type_conversation.each do |question_type| %>
+                        <%= render "question_type",question_type: question_type  %>
+                        <% question_type.questions.each do |question| %>
+                          <%= render "admin/listening/conversation_questions/question",question: question  %>
+                        <% end %>
+                      <% end %>
+                  </tbody>
+                </table>
+              </div><!-- /.span -->
+            </div><!-- /.row -->
+            
+            <div class="hr hr-18 dotted hr-double"></div>
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div>
+      
+  </div>
+
+  <div id="table-details" class="tab-pane">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="table-detail">
+          <table id="dynamic-table" class="table table-striped table-bordered table-hover"></table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

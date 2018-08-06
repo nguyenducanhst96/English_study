@@ -1,0 +1,25 @@
+<tr>
+  <td class="center">
+    <label class="pos-rel">
+      <input type="checkbox" class="ace" />
+      <span class="lbl"></span>
+    </label>
+  </td>
+  <td><%= question.title %></td>
+  <td><%= t ".answer"%><br/><%= Answer.true_answer(question.id).first&.content %></td>
+  <td>
+    <div class="hidden-sm hidden-xs btn-group">
+      <a href="#SuaPart1" role="button" data-toggle="modal">
+        <button class="btn btn-xs btn-info">
+          <i class="ace-icon fa fa-pencil bigger-120"></i>
+        </button>
+      </a>
+      <a href="#XoaPart1" role="button" data-toggle="modal">
+        <button class="btn btn-xs btn-danger">
+          <i class="ace-icon fa fa-trash-o bigger-120">
+          </i>
+        </button>
+      </a>
+    </div>
+  </td>
+</tr>

@@ -1,0 +1,62 @@
+<div class="tabbable">
+  <ul class="nav nav-tabs padding-12 tab-color-blue background-blue" id="myTab4">
+    <li class="active">
+      <a data-toggle="tab" href="#part1"><%= t ".part1"%></a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="part1" class="tab-pane in active">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="input-group col-md-10">
+              <span class="input-group-btn btn-add">
+                <a href="#ThemPart1" role="button" class="green" data-toggle="modal">
+                  <button type="button" class="btn btn-success btn-sm">
+                    <span class="ace-icon fa fa-pencil-square-o icon-on-right bigger-110"></span>
+                    <%= t ".add"%>
+                  </button>
+                </a>
+              </span>
+            </div>
+          </div><br />
+          <!-- PAGE CONTENT BEGINS -->
+          <div class="row">
+            <div class="col-xs-12">
+              <table id="simple-table" class="table  table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th class="center">
+                      <label class="pos-rel">
+                        <input type="checkbox" class="ace" />
+                        <span class="lbl"></span>
+                      </label>
+                    </th>
+                    <th><%= t ".question"%></th>
+                    <th><%= t ".answer" %></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @question_type_writing.each do |question_type| %>
+                    <% question_type.questions.each do |question| %>
+                      <%= render "question",question: question  %>
+                    <% end %>
+                  <% end %>
+                </tbody>
+              </table>
+            </div><!-- /.span -->
+          </div><!-- /.row -->
+
+          <div class="hr hr-18 dotted hr-double"></div>
+          <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div>
+  </div>
+
+  <div class="tab-pane">
+  </div>
+</div>

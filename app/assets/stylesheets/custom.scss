@@ -17,3 +17,11 @@
 @import "admin/jquery.gritter.min";
 @import "admin/select2.min";
 @import "admin/ui.jqgrid.min";
+
+.btn-add {
+  padding-left: 550px;
+  padding-right: 140px;
+}
+#table-details {
+  display: none;
+}
