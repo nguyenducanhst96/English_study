@@ -62,6 +62,30 @@ en:
       conversation_questions:
         question:
           answer: "answer:"
+        new:
+          title: "Create a new rewrite question"
+          question: "Question"
+          answer: "Answer"
+          close: "Close"
+          submit: "Submit"
+          file: "Link file"
+          option: "Option"
+          is_answer: "Is answer"
+          audio_message: "Your browser not support"
+        edit:
+          title: "Edit a new rewrite question"
+          question: "Question"
+          answer: "Answer"
+          close: "Close"
+          submit: "Submit"
+          file: "Link file"
+          option: "Option"
+          is_answer: "Is answer"
+          audio_message: "Your browser not support"
+        create:
+          flash_success: "Create success"
+        update:
+          flash_success: "Update success"
       picture_questions:
         question:
           answer: "answer:"
@@ -162,7 +186,7 @@ en:
           submit: "Submit"
         create:
           flash_success: "Create success"
-        new:
+        edit:
           title: "Edit a rewrite question"
           question: "Question"
           answer: "Answer"
