@@ -1,0 +1,16 @@
+<% questions.each.with_index do |question, index| %>
+  <tr>
+    <td class="center">
+      <label class="pos-rel">
+        <%= check_box_tag "exam[question_ids][]", question.id, false, class: "ace" %>
+        <span class="lbl"></span>
+      </label>
+    </td>
+
+    <td><%= question.title %></td>
+    <% question.answers.each do |option_answer| %>
+      <td><%= option_answer.content %></td>
+    <% end %>
+    <td><%= get_truth_answer question %></td>
+  </tr>
+<% end %>

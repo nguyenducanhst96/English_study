@@ -3,6 +3,6 @@ class Admin::Listening::ListeningExamsController < ApplicationController
 
   def index
     @picture_exams = GetAllExamByTopic.call Topic.codes[:picture]
-    @conversation_exmas = GetAllExamByTopic.call Topic.codes[:conversation]
+    @conversation_exams = GetAllExamByTopic.call Topic.codes[:conversation]
   end
 end
