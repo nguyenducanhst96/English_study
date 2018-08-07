@@ -1,6 +1,8 @@
 class Admin::Writing::WritingQuestionsController < ApplicationController
   layout "admin/application"
-  before_action :find_question, only: %i(edit update)
+  before_action :find_question, except: %i(index new create)
+  before_action :not_belong_to_exam, only: %i(destroy)
+
   def index
     @question_type_writing = GetAllQuestionTypeByTopic
                              .call Topic.codes[:writing]
@@ -33,6 +35,12 @@ class Admin::Writing::WritingQuestionsController < ApplicationController
     end
   end
 
+  def destroy
+    @question.question_type&.destroy
+    flash[:success] = t ".flash"
+    redirect_to request.referrer || root_url
+  end
+
   private
 
   def question_params
@@ -45,5 +53,9 @@ class Admin::Writing::WritingQuestionsController < ApplicationController
     return if @question
     flash[:notice] = t "admin.writing.writing_questions.update.flash_notice"
     redirect_to admin_writing_writing_questions_url
+  end
+
+  def not_belong_to_exam
+    @question.question_type.exam_id.nil?
   end
 end

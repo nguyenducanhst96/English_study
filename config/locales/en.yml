@@ -127,6 +127,8 @@ en:
           answer: "answer"
         question:
           answer: "answer:"
+          delete: "Delete"
+          confirm: "You sure?"
         new:
           title: "Create a new rewrite question"
           question: "Question"
@@ -144,3 +146,5 @@ en:
         update:
           flash_success: "Update success"
           flash_notice: "Question not found"
+        destroy:
+          flash: "Question deleted"
