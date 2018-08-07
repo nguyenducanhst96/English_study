@@ -9,7 +9,7 @@
   <td><%= t ".answer"%><br/><%= Answer.true_answer(question.id).first&.content %></td>
   <td>
     <div class="hidden-sm hidden-xs btn-group">
-      <a href="#SuaPart1" role="button" data-toggle="modal">
+      <a href="<%=edit_admin_writing_writing_question_path question%>" role="button" data-toggle="modal">
         <button class="btn btn-xs btn-info">
           <i class="ace-icon fa fa-pencil bigger-120"></i>
         </button>

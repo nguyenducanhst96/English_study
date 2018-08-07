@@ -1,4 +1,8 @@
 en:
+  shared:
+    error_messages:
+      message: "The form contains"
+      error: "error"
   layouts:
     admin:
       header:
@@ -116,3 +120,12 @@ en:
           submit: "Submit"
         create:
           flash_success: "Create success"
+        new:
+          title: "Edit a rewrite question"
+          question: "Question"
+          answer: "Answer"
+          close: "Close"
+          submit: "Submit"
+        update:
+          flash_success: "Update success"
+          flash_notice: "Question not found"
