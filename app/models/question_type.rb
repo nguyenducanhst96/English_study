@@ -3,6 +3,7 @@ class QuestionType < ApplicationRecord
   belongs_to :exam, optional: true
   has_many :questions, dependent: :destroy
 
+  accepts_nested_attributes_for :questions
   scope :ids_by_topic, (lambda do |topic_id|
     select(:id).where(topic_id: topic_id)
   end)

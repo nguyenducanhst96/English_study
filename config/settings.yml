@@ -8,3 +8,6 @@ validate:
 Admin:
   grammar_exams:
     per_page: 10
+  conversation_question:
+    num_question: 3
+    num_answer: 3

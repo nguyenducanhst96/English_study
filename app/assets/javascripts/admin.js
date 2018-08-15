@@ -1313,3 +1313,10 @@ $("#writing_form").on("submit", function(){
   }
   return true ;
 });
+
+$("#file_input").bind("input", function(){ 
+  var audio = $("#audio");
+  var source = $("#source");
+  source[0].src = $(this).val();
+  audio.load();
+});
