@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  resources :listening
-  resources :writing
-  resources :static_pages
-  resources :reading
   namespace :admin do
     scope :question do
       namespace :listening, path: "/" do
@@ -30,4 +26,11 @@ Rails.application.routes.draw do
       end
     end
   end
+  get "listening", to: "listening#index"
+  get "writing", to: "writing#index"
+  get "listening", to: "listening#index"
+  get "static_pages", to: "static_pages#index"
+  get "reading", to: "reading#index"
+  post "reading/exams", to: "reading#exams_by_topic"
+  get "reading/show/:id", to: "reading#show"
 end

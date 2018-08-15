@@ -202,3 +202,26 @@ en:
           flash_notice: "Question not found"
         destroy:
           flash: "Question deleted"
+  listening:
+    index:
+      picture_exam: "Picture Exam"
+      conversation_exam: "Conversation Exam"
+      home: "Home"
+      english: "English"
+      listening: "Listening"
+      category_of_listening_exam: "Category of listening exam"
+  reading:
+    index:
+      english: "English"
+      reading: "Reading"
+      category_of_reading_exam: "Category of reading exam"
+    show:
+      exam: "Exam"
+      about_these_exams: "About these exams"
+      all_instructors: "All instructors"
+      start: "Start"
+      
+  writing:
+    index:
+      category_of_writing_exam: "Category of writing exam"
+      writing: "Writing"
