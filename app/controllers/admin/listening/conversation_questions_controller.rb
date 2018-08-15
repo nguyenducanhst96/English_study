@@ -1,5 +1,6 @@
 class Admin::Listening::ConversationQuestionsController < ApplicationController
   layout "admin/application"
+  before_action :find_question_type, except: %i(index new create)
 
   def new
     @question_type = QuestionType.new topic_id: Topic.codes[:conversation]
@@ -22,6 +23,17 @@ class Admin::Listening::ConversationQuestionsController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @question_type.update_attributes question_type_params
+      flash[:success] = t ".flash_success"
+      redirect_to admin_listening_listening_questions_url
+    else
+      render :edit
+    end
+  end
+
   private
 
   def question_type_params
@@ -30,10 +42,10 @@ class Admin::Listening::ConversationQuestionsController < ApplicationController
       answers_attributes: [:id, :content, :truth]]
   end
 
-  def find_question
-    @question = Question.find_by id: params[:id]
-    return if @question
+  def find_question_type
+    @question_type = QuestionType.find_by id: params[:id]
+    return if @question_type
     flash[:notice] = t "admin.writing.writing_questions.update.flash_notice"
-    redirect_to admin_writing_writing_questions_url
+    redirect_to admin_listening_listening_questions_url
   end
 end
