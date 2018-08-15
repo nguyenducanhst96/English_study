@@ -1,0 +1,5 @@
+@import "user/bootstrap4/bootstrap.min";
+@import "user/plugins/font-awesome-4.7.0/css/font-awesome.min";
+@import "user/plugins/OwlCarousel2-2.2.1/owl.carousel";
+@import "user/plugins/OwlCarousel2-2.2.1/owl.theme.default";
+@import "user/plugins/OwlCarousel2-2.2.1/animate";

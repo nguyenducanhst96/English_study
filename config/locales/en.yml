@@ -17,6 +17,31 @@ en:
         listen: "Listenning"
         read: "Reading"
         write: "Writing"
+    header:
+      phone: "phone:"
+      phone_number: "+44 300 303 0266"
+      follow_us: "follow us"
+      english: "English"
+      home: "Home"
+    footer:
+      english: "English"
+      subscribe: "Subscribe"
+      about_us: "About Us"
+      van_tuan: "Van Tuan"
+      duc_anh: "Duc Anh"
+      help_&_support: "Help & Support"
+      thi_huong: "Thi Huong"
+      manh_hung: "Manh Hung"
+      privacy_&_terms: "Privacy & Terms"
+      copyright: "Copyright"
+      content_bottom: "All rights reserved | This template is made with"
+      by: "by"
+      colorlib: "Colorlib"
+      phone: "phone:"
+      phone_number: "+44 300 303 0266"
+      follow_us: "follow us"
+    application:
+      study_english: "Study English"
   admin:
     shared:
       exam:

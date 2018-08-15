@@ -1,0 +1,74 @@
+<footer class="footer">
+  <div class="footer_body">
+    <div class="container">
+      <div class="row">
+        <!-- Newsletter -->
+        <div class="col-lg-3 footer_col">
+          <div class="newsletter_container d-flex flex-column align-items-start justify-content-end">
+            <div class="footer_logo mb-auto"><a href="#"><%= t ".english" %></a></div>
+            <div class="footer_title"><%= t ".subscribe" %></div>
+            <form action="#" id="newsletter_form" class="newsletter_form">
+              <input type="email" class="newsletter_input" placeholder="Email" required="required">
+              <button class="newsletter_button"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+            </form>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="col-lg-2 offset-lg-3 footer_col">
+          <div>
+            <div class="footer_title"><%= t ".about_us" %></div>
+            <ul class="footer_list">
+              <li><a href="#"><%= t ".van_tuan" %></a></li>
+              <li><a href="#"><%= t ".duc_anh" %> </a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Help & Support -->
+        <div class="col-lg-2 footer_col">
+          <div class="footer_title"><%= t ".help_&_support" %></div>
+          <ul class="footer_list">
+            <li><a href="#"><%= t ".thi_huong" %></a></li>
+            <li><a href="#"><%= t ".manh_hung" %></a></li>
+          </ul>
+        </div>
+
+        <!-- Privacy -->
+        <div class="col-lg-2 footer_col clearfix">
+          <div>
+            <div class="footer_title"><%= t ".privacy_&_terms" %></div>
+            <ul class="footer_list">
+              <li><a href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="copyright_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
+            <div class="cr"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <%= t ".copyright" %> &copy;<script>document.write(new Date().getFullYear());</script> <%= t ".content_bottom" %> <i class="fa fa-heart-o" aria-hidden="true"></i> <%= t ".by" %> <a href="https://colorlib.com" target="_blank"><%= t ".colorlib" %></a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+            <div class="cr_right ml-md-auto">
+              <div class="footer_phone"><span class="cr_title"><%= t ".phone" %></span><%= t ".phone_number" %></div>
+              <div class="footer_social">
+                <span class="cr_social_title"><%= t ".follow_us" %></span>
+                <ul>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
