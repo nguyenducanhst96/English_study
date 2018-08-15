@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     scope :question do
       namespace :listening, path: "/" do
         resources :listening_questions
-        resource :conversation_questions
+        resources :conversation_questions
       end
       namespace :reading, path: "/" do
         resources :reading_questions

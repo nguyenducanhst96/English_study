@@ -59,6 +59,11 @@ en:
         question_type:
           detail: "Details"
           browser: "Your browser does not support the audio element."
+          answer: "answer:"
+          delete: "Delete"
+          confirm: "You sure?"
+        destroy:
+          flash: "Question deleted"
       conversation_questions:
         question:
           answer: "answer:"
@@ -73,7 +78,7 @@ en:
           is_answer: "Is answer"
           audio_message: "Your browser not support"
         edit:
-          title: "Edit a new rewrite question"
+          title: "Edit a rewrite question"
           question: "Question"
           answer: "Answer"
           close: "Close"
