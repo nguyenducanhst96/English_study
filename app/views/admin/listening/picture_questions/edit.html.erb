@@ -7,7 +7,7 @@
       <%= t ".title"%>
     </div>
   </div>
-  <%= form_for @question_type, url: {controller: "conversation_questions", action: "update" }, html: {class: "form-horizontal"} do |f| %>
+  <%= form_for @question_type, url: {controller: "picture_questions", action: "update" }, html: {class: "form-horizontal"}  do |f| %>
     <%= render "shared/error_messages", object: f.object %>
     <div class="modal-body no-padding">
       <div class="row container">
@@ -49,7 +49,7 @@
                       <div class="form-group">
                         <label class="col-sm-3"><%= t ".option"%> <%= option fff.index %></label>
                         <div class="col-sm-7">
-                          <%= fff.text_field :content, class: "form-control"%>
+                          <%= fff.file_field :picture, class: "form-control id-input-file-3"%>
                         </div>
                         <div class="col-sm-2">
                           <%= fff.check_box :truth, class: "form-control"%> <%= t ".is_answer"%>

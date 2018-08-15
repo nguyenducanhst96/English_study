@@ -1,23 +1,10 @@
-<tr class="detail-row">
-  <td colspan="8">
-    <div class="table-detail">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12">
-          <table id="simple-table" class="table  table-bordered table-hover">
-            <tbody>
-              <tr>
-                <td><%= question.title %></td>
-                <% question.answers.each do |answer| %>
-                  <td><img height="150" class="thumbnail inline no-margin-bottom" alt="lỗi" src="<%= answer.content %>"></td>
-                <% end %>
-                <td>
-                  <%= t ".answer"%> <br/><img height="150" class="thumbnail inline no-margin-bottom" alt="lỗi" src="<%= Answer.true_answer(question.id).first&.content %>">
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+
+<tr>
+  <td><%= question.title %></td>
+  <% question.answers.each do |answer| %>
+    <td><%= image_tag answer.picture.url, class: "thumbnail inline no-margin-bottom picture-answer" if answer.picture? %></td>
+  <% end %>
+  <td>
+    <%= t ".answer"%> <br/><%= image_tag Answer.true_answer(question.id).first&.picture.url, class: "thumbnail inline no-margin-bottom picture-answer" if Answer.true_answer(question.id).first&.picture?%>
   </td>
 </tr>
