@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EnglishStudy</title>
+    <title><%= t ".study_english" %></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Lingua project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'user_application' %>
+    <% if controller.action_name == "index" && controller.controller_name == "static_pages" %>
+      <%= stylesheet_link_tag "user/main_styles" %>
+      <%= stylesheet_link_tag "user/responsive" %>
+    <% else %>
+      <%= stylesheet_link_tag "user/courses" %>
+      <%= stylesheet_link_tag "user/courses_responsive" %>
+    <% end %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="super_container">
+      <!-- Header -->
+      <%= render "layouts/header" %>
+      <%= yield %>
+      <!-- Footer -->
+      <%= render "layouts/footer" %>
+    </div>
+    <!-- #customize end -->
+    <!-- JavaScripts -->
+    <%= javascript_include_tag "user_application" %>
+    <% if controller.action_name == "index" && controller.controller_name == "static_pages" %>
+      <%= javascript_include_tag "user/custom" %>
+    <% else %>
+      <%= javascript_include_tag "user/courses"  %>
+    <% end %>
   </body>
 </html>
