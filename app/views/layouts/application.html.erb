@@ -8,13 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'user_application' %>
-    <% if controller.action_name == "index" && controller.controller_name == "static_pages" %>
+    <% if controller.controller_name == "static_pages"%>
       <%= stylesheet_link_tag "user/main_styles" %>
       <%= stylesheet_link_tag "user/responsive" %>
+    <% elsif controller.action_name == "show" %>
+      <%= stylesheet_link_tag "user/course" %>
+      <%= stylesheet_link_tag "user/course_responsive" %>
     <% else %>
       <%= stylesheet_link_tag "user/courses" %>
       <%= stylesheet_link_tag "user/courses_responsive" %>
     <% end %>
+    <%= javascript_pack_tag 'hello_vue' %>
   </head>
 
   <body>
@@ -28,8 +32,12 @@
     <!-- #customize end -->
     <!-- JavaScripts -->
     <%= javascript_include_tag "user_application" %>
-    <% if controller.action_name == "index" && controller.controller_name == "static_pages" %>
+    <% if controller.controller_name == "static_pages"%>
       <%= javascript_include_tag "user/custom" %>
+    <% elsif controller.action_name == "show" %>
+      <%= javascript_include_tag "user/plugins/parallax-js-master/parallax.min" %>
+      <%= javascript_include_tag "user/plugins/progressbar/progressbar.min" %>
+      <%= javascript_include_tag "user/course" %>
     <% else %>
       <%= javascript_include_tag "user/courses"  %>
     <% end %>

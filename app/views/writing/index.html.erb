@@ -1,0 +1,45 @@
+<!-- Home -->
+<div class="home">
+  <div class="breadcrumbs_container">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <ul class="breadcrumbs_list d-flex flex-row align-items-center justify-content-start">
+            <li><%= t ".english" %></li>
+            <li><%= t ".writing" %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Language -->
+
+<div class="language">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="language_title"><%= t ".category_of_writing_exam" %></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Courses -->
+<div class="courses">
+  <div class="container">
+    <div class="row courses_row">
+
+      <!-- Course -->
+      <div class="col-lg-4 course_col">
+        <div class="course">
+          <div class="course_image"><%= image_tag "course_4.jpg" %></div>
+          <div class="course_body">
+            <div class="course_title"><a href="reading/show/<%= Topic.codes[:writing] %>">Rewriting sentence</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

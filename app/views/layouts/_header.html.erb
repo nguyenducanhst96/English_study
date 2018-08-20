@@ -37,15 +37,15 @@
             </div>
             <nav class="main_nav_contaner">
               <ul class="main_nav">
-                <li class="active"><%= link_to t(".home"), static_pages_index_path %></li>
+                <li class="active"><%= link_to t(".home"), static_pages_path %></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <%= t ".english" %>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <%= link_to "Reading", reading_index_path, class: "dropdown-item" %>
-                    <%= link_to "Listening", listening_index_path, class: "dropdown-item" %>
-                    <%= link_to "Writing", writing_index_path, class: "dropdown-item" %>
+                    <%= link_to "Reading", reading_path, class: "dropdown-item" %>
+                    <%= link_to "Listening", listening_path, class: "dropdown-item" %>
+                    <%= link_to "Writing", writing_path, class: "dropdown-item" %>
                   </div>
                 </li>
               </ul>
