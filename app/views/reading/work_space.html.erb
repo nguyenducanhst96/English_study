@@ -1,0 +1,29 @@
+	<!-- Home -->
+<div class="home">
+  <div class="breadcrumbs_container">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <ul class="breadcrumbs_list d-flex flex-row align-items-center justify-content-start">
+            <li><%= t ".english" %></li>
+            <li><%= t ".reading" %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+	<!-- Language -->
+
+<div class="language">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="language_title">You are doing exam</div>
+          <div id="hello">
+            <exam :id-exam="<%= @id_exam %>" />
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
