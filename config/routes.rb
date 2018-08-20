@@ -37,4 +37,7 @@ Rails.application.routes.draw do
   get "reading", to: "reading#index"
   post "reading/exams", to: "reading#exams_by_topic"
   get "reading/show/:id", to: "reading#show"
+  get "reading/work_space/:id", to: "reading#work_space"
+  post "reading/exam_detail", to: "reading#exam_detail"
+  post "reading/check_answer", to: "reading#check_answer"
 end

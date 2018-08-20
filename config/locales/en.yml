@@ -327,7 +327,8 @@ en:
       about_these_exams: "About these exams"
       all_instructors: "All instructors"
       start: "Start"
-      
+    work_space:
+      you_are_doing_exam: "You are doing exam"
   writing:
     index:
       category_of_writing_exam: "Category of writing exam"

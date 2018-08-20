@@ -18,7 +18,8 @@
       <%= stylesheet_link_tag "user/courses" %>
       <%= stylesheet_link_tag "user/courses_responsive" %>
     <% end %>
-    <%= javascript_pack_tag 'hello_vue' %>
+    <%= javascript_include_tag "https://unpkg.com/sweetalert/dist/sweetalert.min.js" %>
+    <%= javascript_pack_tag "hello_vue" %>
   </head>
 
   <body>

@@ -6,7 +6,7 @@
               header-bg-variant="primary"
               header-text-variant="white"
               align="center">
-        <a href="#"><p class="card-text">Click to do.</p></a>
+        <a :href="convertHref(exam)" target="_blank"><p class="card-text">Click to do.</p></a>
       </b-card>
     </b-card-group>
     <b-card-group deck class="mb-4">
@@ -15,7 +15,7 @@
               header-bg-variant="primary"
               header-text-variant="white"
               align="center">
-        <p class="card-text">Click to do.</p>
+        <a :href="convertHref(exam)" target="_blank"><p class="card-text">Click to do.</p></a>
       </b-card>
     </b-card-group>
     <b-pagination size="md" @input="fetchExams" :total-rows="count" v-model="currentPage" :per-page="per">
@@ -55,10 +55,10 @@ export default {
       referrer: "no-referrer", // no-referrer, *client
       body: JSON.stringify(data), // body data type must match "Content-Type" header
     }).then(response => response.json()); // parses response to JSON
-},
+  },
     fetchExams(){
       console.log(this.codeTopic);
-      return this.postData('http://localhost:3000/reading/exams',
+      return this.postData('http://localhost:3001/reading/exams',
         {id: this.codeTopic, page: this.currentPage, per: this.per})
         .then(json =>{
         this.exams = json.data;
@@ -67,6 +67,10 @@ export default {
         this.exams_second = this.exams.slice(4,8);
         console.log(this.code_topic);
       })
+    },
+    convertHref(exam)
+    {
+      return "/reading/work_space/"+exam.id;
     }
   },
   created() {

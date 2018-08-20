@@ -14,25 +14,25 @@ ActiveRecord::Schema.define(version: 2018_08_20_013517) do
 
   create_table "answers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
-    t.boolean "truth", default: false
-    t.bigint "question_id"
-    t.integer "user_track_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "question_id"
+    t.boolean "truth", default: false
+    t.integer "user_track_id"
     t.string "picture"
     t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
   create_table "exams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.bigint "topic_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "topic_id"
+    t.string "name"
     t.index ["topic_id"], name: "index_exams_on_topic_id"
   end
 
   create_table "question_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "content"
+    t.text "content"
     t.bigint "topic_id"
     t.bigint "exam_id"
     t.datetime "created_at", null: false
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2018_08_20_013517) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "code"
+    t.index ["code"], name: "index_topics_on_code", unique: true
   end
 
   create_table "user_exams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
