@@ -1,7 +1,7 @@
 validate:
   question:
     title:
-      maxlength: 150
+      maxlength: 350
   answer:
     content:
       maxlength: 150
@@ -12,5 +12,7 @@ Admin:
     num_question: 3
     num_answer: 3
   picture_question:
-    num_question: 1
+    num_question: 4
+    num_answer: 3
+  grammar_question:
     num_answer: 4
