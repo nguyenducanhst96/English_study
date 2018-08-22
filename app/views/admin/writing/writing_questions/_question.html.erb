@@ -6,7 +6,7 @@
     </label>
   </td>
   <td><%=raw question.title %></td>
-  <td><%= t ".answer"%><br/><%= Answer.true_answer(question.id).first&.content %></td>
+  <td><%= Answer.true_answer(question.id).first&.content %></td>
   <td>
     <div class="hidden-sm hidden-xs btn-group">
       <a href="<%=edit_admin_writing_writing_question_path question%>" role="button" data-toggle="modal">

@@ -1,24 +1,20 @@
-class Admin::Writing::WritingQuestionsController < ApplicationController
+class Admin::Reading::GrammarQuestionsController < ApplicationController
   layout "admin/application"
-  before_action :find_question, except: %i(index new create)
+  before_action :find_question, except: %i(new create)
   before_action :not_belong_to_exam, only: %i(destroy)
-
-  def index
-    @question_type_writing = GetAllQuestionTypeByTopic
-                             .call Topic.codes[:writing]
-  end
 
   def new
     @question = Question.new
-    @question.answers.new
+    Settings.Admin.grammar_question.num_answer
+            .times{@question.answers.new}
   end
 
   def create
-    question_type = QuestionType.new topic_id: Topic.codes[:writing]
+    question_type = QuestionType.new topic_id: Topic.codes[:grammar]
     @question = question_type.questions.build question_params
     if @question.save
       flash[:success] = t ".flash_success"
-      redirect_to admin_writing_writing_questions_url
+      redirect_to admin_reading_reading_questions_url
     else
       render :new
     end
@@ -29,15 +25,18 @@ class Admin::Writing::WritingQuestionsController < ApplicationController
   def update
     if @question.update_attributes question_params
       flash[:success] = t ".flash_success"
-      redirect_to admin_writing_writing_questions_url
+      redirect_to admin_reading_reading_questions_url
     else
       render :edit
     end
   end
 
   def destroy
-    @question.question_type&.destroy
-    flash[:success] = t ".flash"
+    if @question.question_type&.destroy
+      flash[:success] = t ".flash"
+    else
+      flash[:danger] = t ".flash_danger"
+    end
     redirect_to request.referrer || root_url
   end
 
