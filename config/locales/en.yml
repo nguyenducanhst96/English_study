@@ -48,6 +48,7 @@ en:
         detail: "Detail"
         edit: "Edit"
         delete: "Delete"
+        confirm: "Are you sure??"
     listening: 
       listening_questions:
         index:
@@ -150,6 +151,8 @@ en:
         create:
           flash_success: "Create success!!!"
           flash_danger: "Create failed!!!"
+        destroy:
+          flash: "Delete successfully!!!"
       reading_exams:
         index:
           part1: "Part 1: Grammar reading"

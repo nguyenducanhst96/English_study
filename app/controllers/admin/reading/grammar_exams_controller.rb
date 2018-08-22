@@ -18,6 +18,15 @@ class Admin::Reading::GrammarExamsController < ApplicationController
     end
   end
 
+  def destroy
+    @exam = Exam.find_by id: params[:id]
+    @question_types = @exam.question_types
+    return unless @question_types.update_all exam_id: nil
+    @exam.destroy
+    flash[:success] = t ".flash"
+    redirect_to request.referrer || root_url
+  end
+
   private
 
   def grammar_exam_params

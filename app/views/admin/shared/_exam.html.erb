@@ -15,11 +15,14 @@
               <i class="ace-icon fa fa-pencil bigger-120"> <%= t ".edit" %></i>
             </button>
           </a>
-          <a href="#XoaPart1" role="button" data-toggle="modal">
-            <button class="btn btn-xs btn-danger">
-              <i class="ace-icon fa fa-trash-o bigger-120"> <%= t ".delete" %></i>
-            </button>
-          </a>
+          
+            <a data-confirm="Are you sure??" rel="nofollow" data-method="delete"
+              href="/admin/exam/grammar_exams/<%= exam.id %>">
+              <button class="btn btn-xs btn-danger">
+                <i class="ace-icon fa fa-trash-o bigger-120"> Delete
+                </i>
+              </button>
+            </a>
         </div>
       </td>
     </tr>
